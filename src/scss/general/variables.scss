@@ -1,0 +1,28 @@
+$min-mobile-width: 320px;
+$min-tablet-width: 768px;
+$min-desktop-width: 1024px;
+
+$page-mobile-horizontal-margin: 12px;
+$page-tablet-horizontal-margin: 56px;
+$page-desktop-horizontal-margin: 100px;
+$gap: 12px;
+
+/* Retina */
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+/* Colors */
+$color-white: #ffffff;
+$color-gray: #fefbf9;
+$color-black: #000000;
+$color-blue: #0065ad;
+$color-dark-blue: #01376d;
+$color-red: #d44b4b;
+$color-orange: #ff9517;
+$color-yellow: #fdf12d;
+$color-green: #72bd58;
+$color-aqua: #8aebf7;
+$color-placeholder: #666666;
+
+/* Fonts */
+$font-main: "Montserrat", "Tahoma", "Helvetica", sans-serif;
