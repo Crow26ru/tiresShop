@@ -22,7 +22,9 @@ export const copy = () => {
   return gulp.src([
       'src/img/*.{jpg,png,webp,svg}',
       'src/fonts/*.{woff,woff2}'
-    ])
+    ], {
+      base: 'src'
+    })
     .pipe(gulp.dest('dist'));
 }
 
