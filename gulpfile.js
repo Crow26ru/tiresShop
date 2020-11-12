@@ -14,6 +14,8 @@ import svgstore from 'gulp-svgstore';
 import posthtml from 'gulp-posthtml';
 import htmlInclude from 'posthtml-include';
 
+sync.create();
+
 // Tasks
 export const copyAssets = () => {
   return gulp.src([
@@ -39,6 +41,7 @@ export const makeStyle = () => {
       cssnano()
     ]))
     .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/css'))
     .pipe(sync.stream());
 }
@@ -50,13 +53,12 @@ export const makeSvgSprite = () => {
 }
 
 export const makeHtml = () => {
-  return gulp.src('src/**/*.html')
+  return gulp.src('src/*.html')
     .pipe(plumber())
     .pipe(posthtml([
       htmlInclude()
     ]))
-    .pipe(gulp.dest('dist'))
-;
+    .pipe(gulp.dest('dist'));
 }
 
 export const compressImages = () => {
@@ -72,8 +74,9 @@ export const compressImages = () => {
   ]));
 }
 
-export const refresh = () => {
+export const refresh = (done) => {
   sync.reload();
+  done();
 }
 
 export const startServer = () => {
@@ -87,7 +90,6 @@ export const startServer = () => {
     }
   });
 
-  gulp.watch('src/*.html', gulp.series(makeHtml, refresh));
   gulp.watch('src/**/*.html', gulp.series(makeHtml, refresh));
   gulp.watch('src/img/vector/sprite/*.svg', gulp.series(makeSvgSprite, makeHtml, refresh))
   gulp.watch('src/scss/**/*.scss', gulp.series(makeStyle, refresh));
