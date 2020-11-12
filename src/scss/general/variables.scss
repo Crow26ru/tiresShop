@@ -5,7 +5,10 @@ $min-desktop-width: 1024px;
 $page-mobile-horizontal-margin: 12px;
 $page-tablet-horizontal-margin: 56px;
 $page-desktop-horizontal-margin: 100px;
-$gap: 12px;
+
+$grid-columns-mobile: 2;
+$grid-columns: 12;
+$grid-gutter: 12px;
 
 /* Retina */
 $retina-dpi: 144dpi;

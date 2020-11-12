@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > header,
+body > footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+body > main {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
