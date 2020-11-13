@@ -19,7 +19,8 @@ sync.create();
 // Tasks
 export const copyAssets = () => {
   return gulp.src([
-      'src/img/*.{jpg,png,webp,svg}',
+      'src/img/*.{jpg,png,webp}',
+      'src/img/vector/*.svg',
       'src/fonts/*.{woff,woff2}'
     ], {
       base: 'src'
@@ -96,7 +97,8 @@ export const startServer = () => {
   gulp.watch(
     [
       'src/fonts/*.{woff2,woff}',
-      'src/img/*.{jpg,png,webp}'
+      'src/img/*.{jpg,png,webp}',
+      'src/img/vector/*.svg'
     ],
     copyAssets
   );
