@@ -1,13 +1,15 @@
-<footer>
+<footer class="footer">
   <div class="inner">
-    <div class="contacts">
+    <div class="footer__contacts contacts">
       <h2>Наши контакты</h2>
-      <p>Нам можно позвонить по телефону или написать в Инстаграм.</p>
-      <a href="tel:+79282933911">+7 (928) 293-39-11</a>
-      <a href="tel:+79266702070">+7 (928) 670-20-70</a>
-      <a href="#">@testaccount</a>
+      <p>Нам можно позвонить по&nbsp;телефону или написать в&nbsp;Инстаграм.</p>
+      <div class="contacts__links">
+        <a href="tel:+79282933911">+7 (928) 293-39-11</a>
+        <a href="tel:+79266702070">+7 (928) 670-20-70</a>
+        <a href="#">@testaccount</a>
+      </div>
     </div>
-    <div class="feedback">
+    <div class="footer__feedback feedback">
       <h2>Обратная связь</h2>
       <p>Оставьте ваш номер телефона и мы вам перезвоним</p>
       <form action="#" method="POST" class="feedback__form feedback-form">
@@ -16,7 +18,7 @@
           <input id="name" name="name" type="text" placeholder="Владислав" required>
         </div>
         <div class="feedback-form__item input-container">
-          <label for="phone-num"></label>
+          <label for="phone-num">Номер телефона:</label>
           <input id="phone-num" type="text" placeholder="+7 (999) 123-45-67" required>
         </div>
         <button class="btn btn--stroke-dark" type="submit">Отправить</button>

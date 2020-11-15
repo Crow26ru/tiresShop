@@ -1,0 +1,20 @@
+.logotype,
+.logotype > svg {
+  width: 136px;
+  height: auto;
+
+  @include tablet {
+    width: 68px;
+  }
+}
+
+.logotype {
+  display: block;
+
+  line-height: 0;
+}
+
+.logotype > svg {
+  fill: $color-white;
+}
+

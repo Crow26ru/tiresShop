@@ -1,0 +1,12 @@
+.inner {
+  margin: 0 auto;
+  width: calc(100% - 32px);
+
+  @include tablet {
+    width: calc(100% - 112px);
+  }
+
+  @include desktop {
+    width: calc(100% - 200px);
+  }
+}

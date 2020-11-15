@@ -1,0 +1,19 @@
+.footer {
+  padding: 36px 0;
+
+  background-color: $color-dark-blue;
+}
+
+.footer h2,
+.footer a {
+  color: $color-yellow;
+}
+
+.footer p,
+.footer label {
+  color: $color-white;
+}
+
+.footer > .inner > *:not(:first-child) {
+  margin-top: 48px;
+}

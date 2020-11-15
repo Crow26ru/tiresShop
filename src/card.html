@@ -8,22 +8,24 @@
 </head>
 <body>
   <include src="src/components/svg-sprite/sprite.html"></include>
-  <header class="header-page">
+  <header class="header">
     <div class="inner">
-      <h1 class="visual-hidden">Шинный магазин</h1>
-      <a class="logotype" href="">
-        <svg width="136" height="72">
-          <use xlink:href="#logotype-stub"></use>
-        </svg>
-      </a>
-      <nav class="nav-menu">
-        <ul>
-          <li><a class="link link--light" href="index.html">Главная</a></li>
-          <li><a class="link link--light" href="catalog.html">Каталог</a></li>
-          <li><a class="link link--light" href="contact.html">Контакты</a></li>
-          <li><a class="link link--light" href="calculator">Шинный калькулятор</a></li>
-        </ul>
-      </nav>
+      <h1 class="visual-hidden">Каталог</h1>
+      <div class="header__top">
+        <a class="logotype" href="index.html">
+          <svg width="136" height="72">
+            <use xlink:href="#logotype-stub"></use>
+          </svg>
+        </a>
+        <nav class="header__nav-menu nav-menu">
+          <ul>
+            <li class="nav-menu__item"><a href="index.html">Главная</a></li>
+            <li class="nav-menu__item"><a href="index.html">Каталог</a></li>
+            <li class="nav-menu__item"><a href="contact.html">Контакты</a></li>
+            <li class="nav-menu__item"><a href="calculator">Шинный калькулятор</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main>

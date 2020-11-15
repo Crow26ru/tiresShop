@@ -1,0 +1,44 @@
+.intro {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.intro strong {
+  display: block;
+  margin-bottom: 24px;
+  max-width: 400px;
+
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: $color-yellow;
+}
+
+.intro p {
+  max-width: 430px;
+
+  color: $color-white;
+
+  @include desktop {
+    max-width: 620px;
+  }
+}
+
+.intro__illustration {
+  @include mobile-only {
+    display: none;
+  }
+
+  @include tablet {
+    width: 208px;
+    height: auto;
+  }
+
+  @include desktop {
+    width: 274px;
+  }
+}
