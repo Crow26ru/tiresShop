@@ -9,11 +9,20 @@
   color: $color-yellow;
 }
 
-.footer p,
-.footer label {
+.footer p {
   color: $color-white;
 }
 
+.footer > .inner {
+  @include tablet {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
 .footer > .inner > *:not(:first-child) {
-  margin-top: 48px;
+  @include mobile-only {
+    margin-top: 48px;
+  }
 }

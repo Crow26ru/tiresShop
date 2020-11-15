@@ -1,9 +1,16 @@
+.contacts {
+  @include tablet {
+    width: calc(50% - 6px);
+  }
+}
+
 .contacts > *:not(:first-child) {
   margin-top: 24px;
 }
 
 .contacts p {
   margin: 0;
+  max-width: 320px;
 }
 
 .contacts__links {

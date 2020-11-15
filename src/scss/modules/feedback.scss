@@ -1,0 +1,22 @@
+.feedback {
+  @include tablet {
+    width: calc(50% - 6px);
+  }
+}
+
+.feedback > *:not(:first-child) {
+  margin-top: 24px;
+}
+
+.feedback p {
+  margin: 0;
+  max-width: 320px;
+}
+
+.feedback-form__item:not(:first-child) {
+  margin-top: 12px;
+}
+
+.feedback-form__submit {
+  margin-top: 24px;
+}
