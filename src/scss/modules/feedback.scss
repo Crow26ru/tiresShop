@@ -4,8 +4,8 @@
   }
 }
 
-.feedback > *:not(:first-child) {
-  margin-top: 24px;
+.feedback > *:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 .feedback p {
@@ -13,8 +13,47 @@
   max-width: 320px;
 }
 
-.feedback-form__item:not(:first-child) {
-  margin-top: 12px;
+.feedback__form {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.feedback__form > * {
+  @include desktop {
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-bottom: 0;
+  }
+}
+
+.feedback-form__item {
+  @include desktop {
+    width: clamp(172px, 45%, 240px);
+  }
+}
+
+.feedback-form__item:nth-child(n + 3) {
+  @include desktop {
+    margin-top: 12px;
+  }
+}
+
+.feedback-form__item:nth-child(2n + 1) {
+  @include desktop {
+    margin-right: 24px;
+  }
+}
+
+.feedback-form__item:not(:last-of-type) {
+  margin-bottom: 12px;
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 
 .feedback-form__submit {

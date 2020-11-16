@@ -14,15 +14,28 @@
 }
 
 .footer > .inner {
-  @include tablet {
+  @media (min-width: 696px) {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
   }
 }
 
-.footer > .inner > *:not(:first-child) {
-  @include mobile-only {
-    margin-top: 48px;
+.footer > .inner > div {
+  @media (min-width: 696px) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom: 0;
+
+    &:nth-child(2n + 3) {
+      margin-top: 48px;
+    }
+  }
+}
+
+.footer > .inner > div:not(:last-child) {
+  @media (max-width: 695px) {
+    margin-bottom: 48px;
   }
 }

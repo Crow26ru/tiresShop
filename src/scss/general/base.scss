@@ -40,3 +40,15 @@ h2 {
   font-size: 32px;
   line-height: 48px;
 }
+
+picture,
+img {
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+  line-height: 0;
+}
