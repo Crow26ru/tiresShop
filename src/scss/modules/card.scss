@@ -1,0 +1,51 @@
+.card {
+  width: 288px;
+
+  background-color: $color-white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card > picture {
+  margin-bottom: 24px;
+  width: 100%;
+  height: auto;
+}
+
+.card a,
+.card a:hover,
+.card a:focus,
+.card a:active {
+  transition: color 0.4s, opacity 0.4s;
+}
+
+.card a {
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-blue;
+}
+
+.card a:hover {
+  color: $color-dark-blue;
+}
+
+.card a:focus {
+  color: $color-orange;
+}
+
+.card a:active {
+  color: $color-dark-blue;
+
+  opacity: 0.8;
+}
+
+.card__description a {
+  margin-bottom: 12px;
+}
+
+.card__description p {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}

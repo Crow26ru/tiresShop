@@ -1,99 +1,49 @@
-/* Montserrat Regular Cyrillic */
+/* Montserrat Regular */
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular-Cyrillic.woff2") format("woff2"), url("../fonts/Montserrat-Regular-Cyrillic.woff") format("woff");
-  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, U+2116;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  unicode-range: u+0000-00a0, u+00ab, u+00bb, u+00cb, u+0401, u+0410-044f, u+0451, u+2000-206f, u+20bd, u+2116, u+2215, u+feff, u+fffd;
 }
 
-/* Montserrat Regular Latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular-Latin.woff2") format("woff2"), url("../fonts/Montserrat-Regular-Latin.woff") format("woff");
-  unicode-range: u+0000-00ff, U+0131, u+0152-0153, u+02bb-02bc, u+02c6, U+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
-}
-
-/* Montserrat SemiBold Cyrillic */
+/* Montserrat SemiBold */
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold-Cyrillic.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold-Cyrillic.woff") format("woff");
-  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, U+2116;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  unicode-range: u+0000-00a0, u+00ab, u+00bb, u+00cb, u+0401, u+0410-044f, u+0451, u+2000-206f, u+20bd, u+2116, u+2215, u+feff, u+fffd;
 }
 
-/* Montserrat SemiBold Latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold-Latin.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold-Latin.woff") format("woff");
-  unicode-range: u+0000-00ff, U+0131, u+0152-0153, u+02bb-02bc, u+02c6, U+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
-}
-
-/* Montserrat Bold Cyrillic */
+/* Montserrat Bold */
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold-Cyrillic.woff2") format("woff2"), url("../fonts/Montserrat-Bold-Cyrillic.woff") format("woff");
-  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, U+2116;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  unicode-range: u+0000-00a0, u+00ab, u+00bb, u+00cb, u+0401, u+0410-044f, u+0451, u+2000-206f, u+20bd, u+2116, u+2215, u+feff, u+fffd;
 }
 
-/* Montserrat Bold Latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold-Latin.woff2") format("woff2"), url("../fonts/Montserrat-Bold-Latin.woff") format("woff");
-  unicode-range: u+0000-00ff, U+0131, u+0152-0153, u+02bb-02bc, u+02c6, U+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
-}
-
-/* Helvetica Neue Regular Cyrillic */
+/* Helvetica Neue Regular */
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/HelveticaNeue-Regular-Cyrillic.woff2") format("woff2"), url("../fonts/HelveticaNeue-Regular-Cyrillic.woff") format("woff");
-  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, U+2116;
+  src: url("../fonts/HelveticaNeue-Regular.woff2") format("woff2"), url("../fonts/HelveticaNeue-Regular.woff") format("woff");
+  unicode-range: u+0000-00a0, u+00ab, u+00bb, u+00cb, u+0401, u+0410-044f, u+0451, u+2000-206f, u+20bd, u+2116, u+2215, u+feff, u+fffd;
 }
 
-/* Helvetica Neue Regular Latin */
-@font-face {
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/HelveticaNeue-Regular-Latin.woff2") format("woff2"), url("../fonts/HelveticaNeue-Regular-Latin.woff") format("woff");
-  unicode-range: u+0000-00ff, U+0131, u+0152-0153, u+02bb-02bc, u+02c6, U+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
-}
-
-/* Helvetica Neue Bold Cyrillic */
+/* Helvetica Neue Bold */
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/HelveticaNeue-Bold-Cyrillic.woff2") format("woff2"), url("../fonts/HelveticaNeue-Bold-Cyrillic.woff") format("woff");
-  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, U+2116;
-}
-
-/* Helvetica Neue Bold Latin */
-@font-face {
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/HelveticaNeue-Bold-Latin.woff2") format("woff2"), url("../fonts/HelveticaNeue-Bold-Latin.woff") format("woff");
-  unicode-range: u+0000-00ff, U+0131, u+0152-0153, u+02bb-02bc, u+02c6, U+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+  src: url("../fonts/HelveticaNeue-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeue-Bold.woff") format("woff");
+  unicode-range: u+0000-00a0, u+00ab, u+00bb, u+00cb, u+0401, u+0410-044f, u+0451, u+2000-206f, u+20bd, u+2116, u+2215, u+feff, u+fffd;
 }
