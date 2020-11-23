@@ -1,8 +1,14 @@
 .card {
+  padding-bottom: 12px;
   width: 288px;
 
   background-color: $color-white;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  @include tablet {
+    padding-bottom: 8px;
+    width: 208px;
+  }
 }
 
 .card > picture {
@@ -38,7 +44,12 @@
   opacity: 0.8;
 }
 
+.card__description {
+  padding: 0 8px;
+}
+
 .card__description a {
+  display: inline-block;
   margin-bottom: 12px;
 }
 

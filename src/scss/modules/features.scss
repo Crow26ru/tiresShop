@@ -2,15 +2,9 @@
   color: $color-white;
 
   @include mobile-only {
+    margin-top: -36px;
+
     background-color: $color-blue;
-  }
-
-  @include tablet {
-    padding: 36px 0;
-  }
-
-  @include desktop {
-    padding: 72px 0;
   }
 }
 
@@ -22,7 +16,7 @@
 
   @include desktop {
     margin: 0 auto;
-    max-width: 200px;
+    max-width: 83%;
   }
 }
 
@@ -37,25 +31,25 @@
 .features__item p {
   margin: 0 auto;
 
-  @include tablet {
-    max-width: 210px;
+  @include tablet-only {
+    max-width: 65.63%;
   }
 }
 
 .features__list {
   @include list-reset;
+  display: grid;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  @include tablet {
-    margin: 0 auto;
-    max-width: 660px;
+  @include tablet-only {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.44%;
+    row-gap: 12px;
   }
 
-  @media (min-width: 1280px) {
-    max-width: 100%;
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 36px;
+    row-gap: 36px;
   }
 }
 
@@ -65,48 +59,20 @@
   @include mobile-only {
     margin-bottom: 24px;
     padding-left: 60px;
-    max-width: 350px;
   }
 
   @include tablet {
+    background-color: $color-blue;
+  }
+
+  @include tablet-only {
     padding-top: 84px;
     padding-bottom: 12px;
-    width: 320px;
-
-    background-color: $color-blue;
   }
 
   @include desktop {
     padding-top: 156px;
     padding-bottom: 36px;
-  }
-
-  @media (min-width: 1280px) {
-    width: 244px;
-  }
-}
-
-.features__item:nth-child(n + 3) {
-  @include tablet {
-    margin-top: 12px;
-  }
-
-  @media (min-width: 1280px) {
-    margin-top: 0;
-  }
-}
-
-.features__item:nth-child(n + 5) {
-  @media (min-width: 1280px) {
-    margin-top: 32px;
-  }
-}
-
-.features__item:nth-child(4n + 1),
-.features__item:nth-child(4n + 2),
-.features__item:nth-child(4n + 3) {
-  @media (min-width: 1280px) {
-    margin-right: 32px;
   }
 }
 

@@ -54,3 +54,31 @@ img {
 
   line-height: 0;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 36px 0;
+
+  @include tablet {
+    padding: 48px 0;
+  }
+
+  @include desktop {
+    padding: 72px 0;
+  }
+}
+
+main > *:not(:last-child) {
+  margin-bottom: 36px;
+
+  @include tablet {
+    margin-bottom: 48px;
+  }
+
+  @include desktop {
+    margin-bottom: 72px;
+  }
+}
