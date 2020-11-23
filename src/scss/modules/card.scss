@@ -9,6 +9,11 @@
     padding-bottom: 8px;
     width: 208px;
   }
+
+  @include desktop {
+    padding-bottom: 12px;
+    width: 344px;
+  }
 }
 
 .card > picture {

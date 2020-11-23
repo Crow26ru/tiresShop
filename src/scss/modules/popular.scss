@@ -1,73 +1,43 @@
 .popular__list {
   @include list-reset;
 
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  justify-items: center;
   justify-content: center;
+  row-gap: 24px;
+  margin: 0 auto;
 
-  @media (max-width: 631px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  @include mobile-only {
+    grid-template-columns: 1fr;
+    margin-bottom: 36px;
   }
 
-  @media (min-width: 632px) {
-    flex-wrap: wrap;
-    justify-content: space-between;
+  @include tablet-only {
+    grid-template-columns: repeat(3, 208px);
+    column-gap: 16px;
+    margin-bottom: 48px;
   }
-}
 
-@media (min-width: 632px) and (max-width: 767px) {
-  .popular__item:last-child {
-    margin: 0 auto;
-  }
-}
-
-@include tablet-only {
-  .popular__item:nth-child(3n + 1),
-  .popular__item:nth-child(3n + 2) {
-    margin-right: 16px;
+  @include desktop {
+    grid-template-columns: repeat(3, 344px);
+    column-gap: 24px;
+    margin-bottom: 72px;
   }
 }
 
-.popular__item:not(:last-child) {
-  margin-bottom: 24px;
-}
-
-.catalog__wrapper-link {
+.popular__wrapper-link {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.popular__catalog-link {
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: clamp(288px, 100%, 512px);
+.popular__wrapper-link > a {
+  margin: 0 16px;
 }
 
-.popular__catalog-link::before,
-.popular__catalog-link::after {
-  content: "";
-
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 0;
-  height: 1px;
-
+.popular__wrapper-link > div {
   background-color: $color-blue;
-}
-
-.popular__catalog-link::before {
-  margin-right: 6px;
-}
-
-.popular__catalog-link::after {
-  margin-left: 6px;
-}
-
-.popular__catalog-link > span {
-  width: 172px;
-
-  line-height: 48px;
+  width: 100%;
+  max-width: 164px;
+  height: 1px;
 }

@@ -64,3 +64,48 @@
 
   cursor: default;
 }
+
+.btn--solid-light,
+.btn--solid-light:hover,
+.btn--solid-light:focus,
+.btn--solid-light:active {
+  transition: color 0.4s, background-color 0.4s, opacity 0.4s;
+}
+
+.btn--solid-light {
+  border: none;
+
+  color: $color-white;
+
+  background-color: $color-blue;
+}
+
+.btn--solid-light:hover {
+  color: $color-white;
+
+  background-color: $color-dark-blue;
+}
+
+.btn--solid-light:focus {
+  color: $color-black;
+
+  background-color: $color-orange;
+
+  outline: none;
+}
+
+.btn--solid-light:active {
+  color: $color-white;
+
+  background-color: $color-dark-blue;
+
+  opacity: 0.8;
+}
+
+.btn--solid-light:disabled {
+  color: $color-black;
+
+  background-color: #b0b0b0;
+
+  cursor: default;
+}
