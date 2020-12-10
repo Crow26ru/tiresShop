@@ -1,0 +1,213 @@
+.shop-filter {
+  @include mobile-only {
+    background-color: $color-dark-blue;
+  }
+}
+
+.shop-filter h2 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+
+  @include mobile-only {
+    color: $color-yellow;
+  }
+}
+
+.shop-filter fieldset {
+  border: none;
+  border-bottom: 1px solid $color-placeholder;
+  margin: 0;
+  padding: 0 0 24px 0;
+
+  @include mobile-only {
+    border-color: $color-gray;
+  }
+}
+
+.shop-filter fieldset:nth-last-of-type(n + 2) {
+  margin-bottom: 36px;
+}
+
+.shop-filter legend,
+.shop-filter label {
+  @include mobile-only {
+    color: $color-white;
+  }
+}
+
+.shop-filter legend {
+  margin-bottom: 24px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.shop-filter__item:nth-last-of-type(n + 2) {
+  margin-bottom: 12px;
+}
+
+// mobile radio button on dark background
+@include mobile-only {
+  .shop-filter__item.radio-btn > label::before {
+    border-color: $color-white;
+  }
+
+  // radio button checked
+  .shop-filter__item.radio-btn > input:checked + label::after {
+    background-color: $color-white;
+  }
+
+  // radio button hover
+  .shop-filter__item.radio-btn > label:hover::before {
+    border-color: $color-yellow;
+  }
+
+  .shop-filter__item.radio-btn > input:checked + label:hover::after {
+    background-color: $color-yellow;
+  }
+
+  .shop-filter__item.radio-btn > label:active::before {
+    border-color: $color-white;
+  }
+
+  .shop-filter__item.radio-btn > input:checked + label:active::after {
+    background-color: $color-white;
+  }
+
+  // radio button focus
+  .shop-filter__item.radio-btn > input:focus + label::before {
+    border-color: $color-orange;
+  }
+
+  .shop-filter__item.radio-btn > input:focus:checked + label::after {
+    background-color: $color-orange;
+  }
+}
+
+// Cost filter
+.shop-filter__item--cost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  @include mobile-only {
+    flex-direction: row;
+  }
+}
+
+.shop-filter__cost-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 0;
+  flex-shrink: 0;
+  // width: 39.6%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.shop-filter__cost-wrapper:nth-last-of-type(n + 2) {
+  @include tablet {
+    margin-bottom: 12px;
+  }
+}
+
+@include mobile-only {
+  .shop-filter__cost-wrapper:nth-last-child(n + 2) {
+    margin-right: 24px;
+  }
+}
+
+.shop-filter__cost-wrapper > label {
+  margin-right: 8px;
+
+  @include tablet {
+    width: 24px;
+  }
+}
+
+.shop-filter__cost-wrapper > input {
+  width: 84px;
+
+  @include tablet {
+    width: calc(100% - 32px);
+  }
+}
+
+.shop-filter__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 0;
+}
+
+.shop-filter__controls > button {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.shop-filter__controls > button:nth-last-child(n + 2) {
+  margin-bottom: 12px;
+}
+
+.shop-filter__reset-btn {
+  background-color: $color-red;
+}
+
+// Submit ad reset buttons on mobile
+@include mobile-only {
+  .shop-filter__submit-btn,
+  .shop-filter__submit-btn:hover,
+  .shop-filter__submit-btn:focus,
+  .shop-filter__submit-btn:active,
+  .shop-filter__reset-btn,
+  .shop-filter__reset-btn:hover,
+  .shop-filter__reset-btn:focus,
+  .shop-filter__reset-btn:active {
+    background-color: transparent;
+
+    transition: border-color 0.4s, color 0.4s, opacity 0.4s;
+  }
+
+  .shop-filter__submit-btn,
+  .shop-filter__submit-btn:active {
+    border: 2px solid $color-white;
+
+    color: $color-white;
+
+    background-color: transparent;
+  }
+
+  .shop-filter__submit-btn:hover,
+  .shop-filter__reset-btn:hover {
+    border-color: $color-yellow;
+
+    color: $color-yellow;
+  }
+
+  .shop-filter__submit-btn:focus,
+  .shop-filter__reset-btn:focus {
+    border-color: $color-orange;
+
+    color: $color-orange;
+  }
+
+  .shop-filter__submit-btn:active,
+  .shop-filter__reset-btn:active {
+    opacity: 0.8;
+  }
+
+  .shop-filter__reset-btn,
+  .shop-filter__reset-btn:active {
+    border: 2px solid $color-aqua;
+
+    color: $color-aqua;
+  }
+}

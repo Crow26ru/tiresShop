@@ -1,0 +1,126 @@
+.radio-btn {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 48px;
+}
+
+.radio-btn > * {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.radio-btn label {
+  padding-left: 54px;
+  width: 100%;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+
+  cursor: pointer;
+}
+
+.radio-btn > input:disabled + label {
+  cursor: default;
+}
+
+// radio button on light background
+.radio-btn > label,
+.radio-btn > label:hover,
+.radio-btn > label:active,
+.radio-btn > input:checked + label,
+.radio-btn > input:checked + label:hover,
+.radio-btn > input:checked + label:active {
+  &::before,
+  &::after {
+    transition: background-color 0.4s, border-color 0.4s, opacity 0.4s;
+  }
+}
+
+.radio-btn > input:checked:focus + label::before,
+.radio-btn > input:checked:focus + label::after {
+  transition: none;
+}
+
+.radio-btn > label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  display: block;
+  border: 4px solid $color-blue;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+
+  transform: translate(0, -50%);
+}
+
+// radio button checked
+.radio-btn > input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  display: block;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+
+  background-color: $color-blue;
+
+  transform: translate(0, -50%);
+}
+
+// radio button hover
+.radio-btn > label:hover::before {
+  border-color: $color-dark-blue;
+}
+
+.radio-btn > input:checked + label:hover::after {
+  background-color: $color-dark-blue;
+}
+
+// radio button focus
+.radio-btn > input:focus + label::before {
+  border-color: $color-orange;
+}
+
+.radio-btn > input:focus:checked + label::after {
+  background-color: $color-orange;
+}
+
+// radio button active
+.radio-btn > label:active::before,
+.radio-btn > input:checked + label:active::after {
+  opacity: 0.8;
+}
+
+.radio-btn > label:active::before {
+  border-color: $color-blue;
+}
+
+.radio-btn > input:checked + label:active::after {
+  background-color: $color-blue;
+}
+
+// radio button disabled
+.radio-btn > input:disabled + label::before,
+.radio-btn > input:disabled + label:hover::before,
+.radio-btn > input:disabled + label:active::before {
+  border-color: $color-placeholder;
+}
+
+.radio-btn > input:disabled + label::after,
+.radio-btn > input:disabled + label:hover::after,
+.radio-btn > input:disabled + label:active::after {
+  background-color: $color-placeholder;
+}

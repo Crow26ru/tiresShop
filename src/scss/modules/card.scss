@@ -1,18 +1,18 @@
 .card {
   padding-bottom: 12px;
-  width: 288px;
+  // width: 288px;
 
   background-color: $color-white;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 
   @include tablet {
     padding-bottom: 8px;
-    width: 208px;
+    // width: 208px;
   }
 
   @include desktop {
     padding-bottom: 12px;
-    width: 344px;
+    // width: 344px;
   }
 }
 

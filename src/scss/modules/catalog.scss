@@ -1,0 +1,49 @@
+.catalog__list {
+  @include list-reset;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.catalog__item {
+  @include mobile-only {
+    margin: 0 auto;
+    width: 288px;
+  }
+
+  @include tablet-only {
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    width: 100%;
+  }
+}
+
+@media (min-width: #{$min-mobile-width}) and (max-width: #{$min-desktop-width - 1}) {
+  .catalog__item:nth-last-of-type(n + 2) {
+    margin-bottom: 36px;
+  }
+}
+
+.catalog__item > picture {
+  @include tablet-only {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    width: 132px;
+    height: 132px;
+  }
+}
+
+.catalog__item .card__description {
+  @include tablet-only {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-grow: 0;
+  }
+}

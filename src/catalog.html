@@ -29,239 +29,241 @@
     </div>
   </header>
   <main>
-    <h1 class="visual-hidden">Каталог</h1>
-    <div class="inner">
-      <form class="catalog-filter" action="#" method="POST">
-        <h2>Фильтр</h2>
-        <fieldset>
-          <legend>Размер</legend>
-          <div class="catalog-filter__item input-container">
-            <label for="tyre-width">Ширина</label>
-            <select id="tyre-width" name="tyre-width">
-              <option value="7.50">7.50</option>
-              <option value="8.25">8.25</option>
-              <option value="9.00">9.00</option>
-              <option value="10.00">10.00</option>
-              <option value="11.00">11.00</option>
-              <option value="12.00">12.00</option>
-              <option value="155">155</option>
-              <option value="165">165</option>
-              <option value="175">175</option>
-              <option value="185">185</option>
-              <option value="195">195</option>
-              <option value="205">205</option>
-              <option value="215">215</option>
-              <option value="225">225</option>
-              <option value="235">235</option>
-              <option value="245">245</option>
-              <option value="255">255</option>
-              <option value="265">265</option>
-              <option value="275">275</option>
-              <option value="285">285</option>
-              <option value="295">295</option>
-              <option value="305">305</option>
-              <option value="315">315</option>
-              <option value="365">365</option>
-            </select>
+    <section class="shop">
+      <h1 class="visual-hidden">Каталог</h1>
+      <div class="inner shop__inner">
+        <form class="shop__filter shop-filter" action="#" method="POST">
+          <h2>Фильтр</h2>
+          <fieldset>
+            <legend>Размер</legend>
+            <div class="shop-filter__item select">
+              <label for="tyre-width">Ширина</label>
+              <select id="tyre-width" name="tyre-width">
+                <option value="7.50">7.50</option>
+                <option value="8.25">8.25</option>
+                <option value="9.00">9.00</option>
+                <option value="10.00">10.00</option>
+                <option value="11.00">11.00</option>
+                <option value="12.00">12.00</option>
+                <option value="155">155</option>
+                <option value="165">165</option>
+                <option value="175">175</option>
+                <option value="185">185</option>
+                <option value="195">195</option>
+                <option value="205">205</option>
+                <option value="215">215</option>
+                <option value="225">225</option>
+                <option value="235">235</option>
+                <option value="245">245</option>
+                <option value="255">255</option>
+                <option value="265">265</option>
+                <option value="275">275</option>
+                <option value="285">285</option>
+                <option value="295">295</option>
+                <option value="305">305</option>
+                <option value="315">315</option>
+                <option value="365">365</option>
+              </select>
+            </div>
+            <div class="shop-filter__item select">
+              <label for="tyre-height">Высота</label>
+              <select id="tyre-height" name="tyre-height">
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="60">60</option>
+                <option value="65">65</option>
+                <option value="70">70</option>
+                <option value="75">75</option>
+                <option value="80">80</option>
+                <option value="85">85</option>
+                <option value="90">90</option>
+              </select>
+            </div>
+            <div class="shop-filter__item select">
+              <label for="tyre-diameter">Диаметр</label>
+              <select id="tyre-diameter" name="tyre-diameter">
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="17.5">17.5</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="19.5">19.5</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="22.5">22.5</option>
+                <option value="24">24</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Сезонность</legend>
+            <div class="shop-filter__item radio-btn">
+              <input id="summer" class="visual-hidden" name="season" type="radio" value="summer" checked>
+              <label for="summer">Летние</label>
+            </div>
+            <div class="shop-filter__item radio-btn">
+              <input id="stud" class="visual-hidden" name="season" type="radio" value="stud">
+              <label for="stud">Зимние шипованные</label>
+            </div>
+            <div class="shop-filter__item radio-btn">
+              <input id="studless" class="visual-hidden" name="season" type="radio" value="studless">
+              <label for="studless">Зимние нешипованные</label>
+            </div>
+            <div class="shop-filter__item radio-btn">
+              <input id="all-season" class="visual-hidden" name="season" type="radio" value="all-season">
+              <label for="all-season">Весезонные</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Цена</legend>
+            <div class="shop-filter__item shop-filter__item--cost">
+              <div class="shop-filter__cost-wrapper">
+                <label for="min-cost">от</label>
+                <input id="min-cost" class="input" name="min-cost" type="text" placeholder="2000">
+              </div>
+              <div class="shop-filter__cost-wrapper">
+                <label for="max-cost">до</label>
+                <input id="max-cost" class="input" name="max-cost" type="text" placeholder="28000">
+              </div>
+            </div>
+          </fieldset>
+          <div class="shop-filter__controls">
+            <button class="btn shop-filter__submit-btn" type="submit">Найти</button>
+            <button class="btn shop-filter__reset-btn" type="reset">Отчистить</button>
           </div>
-          <div class="catalog-filter__item input-container">
-            <label for="tyre-height">Высота</label>
-            <select id="tyre-height" name="tyre-height">
-              <option value="30">30</option>
-              <option value="35">35</option>
-              <option value="40">40</option>
-              <option value="45">45</option>
-              <option value="50">50</option>
-              <option value="55">55</option>
-              <option value="60">60</option>
-              <option value="65">65</option>
-              <option value="70">70</option>
-              <option value="75">75</option>
-              <option value="80">80</option>
-              <option value="85">85</option>
-              <option value="90">90</option>
-            </select>
-          </div>
-          <div class="catalog-filter__item input-container">
-            <label for="tyre-diameter">Диаметр</label>
-            <select id="tyre-diameter" name="tyre-diameter">
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="17.5">17.5</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="19.5">19.5</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="22.5">22.5</option>
-              <option value="24">24</option>
-            </select>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Сезонность</legend>
-          <div class="catalog-filter__item radio-container">
-            <input id="summer" name="season" type="radio" value="summer" checked>
-            <label for="summer">Летние</label>
-          </div>
-          <div class="catalog-filter__item radio-container">
-            <input id="stud" name="season" type="radio" value="stud">
-            <label for="stud">Зимние шипованные</label>
-          </div>
-          <div class="catalog-filter__item radio-container">
-            <input id="studless" name="season" type="radio" value="studless">
-            <label for="studless">Зимние нешипованные</label>
-          </div>
-          <div class="catalog-filter__item radio-container">
-            <input id="all-season" name="season" type="radio" value="all-season">
-            <label for="all-season">Весезонные</label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Цена</legend>
-          <div class="catalog-filter__item catalog-filter__item--cost">
-            <div class="catalog-filter__cost-wrapper">
-              <label for="min-cost">от</label>
-              <input id="min-cost" name="min-cost" type="text" placeholder="2000">
-            </div>
-            <div class="catalog-filter__cost-wrapper">
-              <label for="max-cost">до</label>
-              <input id="max-cost" name="max-cost" type="text" placeholder="28000">
-            </div>
-          </div>
-        </fieldset>
-        <div class="catalog-filter__controls">
-          <button class="btn catalog-filter__submit-btn" type="submit">Найти</button>
-          <button class="btn catalog-filter__reset-btn" type="reset">Отчистить</button>
-        </div>
-      </form>
-      <section class="catalog">
-        <h2 class="visual-hidden">Результаты поиска</h2>
-        <ul class="cataalog__list">
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
+        </form>
+        <section class="shop__catalog catalog">
+          <h2 class="visual-hidden">Результаты поиска</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+            <li class="catalog__item card">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+              </picture>
+              <div class="card__description">
+                <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
+                <p>15&nbsp;000&nbsp;₽</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <ul class="shop__paginator paginator">
+          <li class="paginator__item paginator__item--active">
+            <a>&lt;&lt;</a>
           </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
+          <li class="paginator__item paginator__item--active">
+            <a>1</a>
           </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
+          <li class="paginator__item">
+            <a href="#">2</a>
           </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
+          <li class="paginator__item">
+            <a href="#">3</a>
           </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
-          </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
-          </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
-          </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
-          </li>
-          <li class="catalog__item card">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-              <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
-            </picture>
-            <div class="card__description">
-              <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
-              <p>15&nbsp;000&nbsp;₽</p>
-            </div>
+          <li class="paginator__item">
+            <a href="#">&gt;&gt;</a>
           </li>
         </ul>
-      </section>
-      <ul class="paginator">
-        <li class="paginator__item paginator__item--active">
-          <a>&lt;&lt;</a>
-        </li>
-        <li class="paginator__item paginator__item--active">
-          <a>1</a>
-        </li>
-        <li class="paginator__item">
-          <a href="#">2</a>
-        </li>
-        <li class="paginator__item">
-          <a href="#">3</a>
-        </li>
-        <li class="paginator__item">
-          <a href="#">&gt;&gt;</a>
-        </li>
-      </ul>
-    </div>
+      </div>
+    </section>
   </main>
   <include src="src/components/footer/footer.html"></include>
 </body>

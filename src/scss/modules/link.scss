@@ -1,0 +1,35 @@
+.link,
+.link:hover,
+.link:focus,
+.link:active {
+  transition: color 0.4s, opacity 0.4s;
+}
+
+.link {
+  color: $color-blue;
+}
+
+.link:hover {
+  color: $color-dark-blue;
+}
+
+.link:focus {
+  color: $color-orange;
+
+  outline: none;
+}
+
+.link:active {
+  color: $color-blue;
+
+  opacity: 0.8;
+}
+
+.link--dark-bg {
+  color: $color-yellow;
+}
+
+.link--dark-bg:hover,
+.link--dark-bg:active {
+  color: $color-aqua;
+}

@@ -1,0 +1,66 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.select > * {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.select > label {
+  margin-bottom: 6px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-black;
+}
+
+.select > select,
+.select > select:hover,
+.select > select:focus,
+.select > select:active {
+  transition: 0.4s border-color, 0.4s opacity;
+}
+
+.select > select {
+  position: relative;
+
+  border: 2px solid $color-blue;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 22px;
+  width: 100%;
+  min-height: 48px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  background-color: $color-white;
+  background-image: url("../img/vector/arrow-down.svg");
+  background-size: 14px 8px;
+  background-position: calc(100% - 8px) calc(50% + 1px);
+  background-repeat: no-repeat;
+
+  appearance: none;
+  cursor: pointer;
+}
+
+.select > select:hover {
+  border-color: $color-dark-blue;
+}
+
+.select > select:focus {
+  border-color: $color-orange;
+
+  outline: none;
+}
+
+.select > select:active {
+  border-color: $color-dark-blue;
+
+  opacity: 0.8;
+}

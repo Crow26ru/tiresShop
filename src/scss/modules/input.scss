@@ -1,0 +1,52 @@
+.input,
+.input:hover,
+.input:focus,
+.input:active {
+  transition: border-color 0.4s, opacity 0.4s;
+}
+
+.input {
+  border: 2px solid $color-blue;
+  border-radius: 8px;
+  padding: 0 8px;
+  min-height: 48px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  appearance: none;
+
+  &::placeholder {
+    color: $color-placeholder;
+
+    opacity: 1;
+  }
+}
+
+.input:hover {
+  border-color: $color-dark-blue;
+}
+
+.input:focus {
+  border-color: $color-orange;
+
+  outline: none;
+}
+
+.input:active {
+  border-color: $color-dark-blue;
+
+  opacity: 0.8;
+}
+
+.input--dark-bg {
+  border-color: $color-silver;
+}
+
+.input--dark-bg:hover {
+  border-color: $color-green;
+}
+
+.input--dark-bg:active {
+  border-color: $color-silver;
+}

@@ -6,6 +6,12 @@
   @include mobile-only {
     padding: 12px 0;
 
+    background-image: linear-gradient(180deg, $color-dark-blue 0%, $color-dark-blue 10%, $color-blue 40%, $color-blue 60%, $color-dark-blue 90%, $color-dark-blue 100%);
+  }
+}
+
+.header--index {
+  @include mobile-only {
     background-image: linear-gradient(180deg, $color-dark-blue 0%, $color-blue 100%);
   }
 }

@@ -1,7 +1,15 @@
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  transition: color 0.4s, background-color 0.4s, opacity 0.4s;
+}
+
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
   border-radius: 8px;
   padding-left: 24px;
   padding-right: 24px;
@@ -15,78 +23,21 @@
   text-decoration: underline;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: $color-white;
+
+  background-color: $color-blue;
 
   appearance: none;
   cursor: pointer;
 }
 
-.btn--stroke-dark,
-.btn--stroke-dark:hover,
-.btn--stroke-dark:focus,
-.btn--stroke-dark:active {
-  transition: color 0.4s, border-color 0.4s, opacity 0.4s;
-}
-
-.btn--stroke-dark {
-  border: 2px solid $color-white;
-
-  color: $color-white;
-
-  background-color: transparent;
-}
-
-.btn--stroke-dark:hover {
-  border-color: $color-yellow;
-
-  color: $color-yellow;
-}
-
-.btn--stroke-dark:focus {
-  border-color: $color-orange;
-
-  color: $color-orange;
-
-  outline: none;
-}
-
-.btn--stroke-dark:active {
-  border-color: $color-yellow;
-
-  color: $color-yellow;
-
-  opacity: 0.8;
-}
-
-.btn--stroke-dark:disabled {
-  border-color: #b0b0b0;
-
-  color: #b0b0b0;
-
-  cursor: default;
-}
-
-.btn--solid-light,
-.btn--solid-light:hover,
-.btn--solid-light:focus,
-.btn--solid-light:active {
-  transition: color 0.4s, background-color 0.4s, opacity 0.4s;
-}
-
-.btn--solid-light {
-  border: none;
-
-  color: $color-white;
-
-  background-color: $color-blue;
-}
-
-.btn--solid-light:hover {
+.btn:hover {
   color: $color-white;
 
   background-color: $color-dark-blue;
 }
 
-.btn--solid-light:focus {
+.btn:focus {
   color: $color-black;
 
   background-color: $color-orange;
@@ -94,7 +45,7 @@
   outline: none;
 }
 
-.btn--solid-light:active {
+.btn:active {
   color: $color-white;
 
   background-color: $color-dark-blue;
@@ -102,10 +53,59 @@
   opacity: 0.8;
 }
 
-.btn--solid-light:disabled {
+.btn:disabled {
   color: $color-black;
 
   background-color: #b0b0b0;
+
+  cursor: default;
+}
+
+.btn--stroke,
+.btn--stroke:hover,
+.btn--stroke:focus,
+.btn--stroke:active {
+  transition: color 0.4s, border-color 0.4s, opacity 0.4s;
+}
+
+.btn--stroke {
+  border: 2px solid $color-white;
+
+  color: $color-white;
+
+  background-color: transparent;
+}
+
+.btn--stroke:hover {
+  border-color: $color-yellow;
+
+  color: $color-yellow;
+}
+
+.btn--stroke:focus {
+  border-color: $color-orange;
+
+  color: $color-orange;
+
+  background-color: transparent;
+
+  outline: none;
+}
+
+.btn--stroke:active {
+  border-color: $color-yellow;
+
+  color: $color-yellow;
+
+  background-color: transparent;
+
+  opacity: 0.8;
+}
+
+.btn--stroke:disabled {
+  border-color: #b0b0b0;
+
+  color: #b0b0b0;
 
   cursor: default;
 }

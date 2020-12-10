@@ -25,6 +25,18 @@
   }
 }
 
+.popular__item {
+  width: 288px;
+
+  @include tablet {
+    width: 208px;
+  }
+
+  @include desktop {
+    width: 344px;
+  }
+}
+
 .popular__wrapper-link {
   display: flex;
   align-items: center;
