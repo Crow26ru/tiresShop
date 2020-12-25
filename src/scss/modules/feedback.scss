@@ -14,48 +14,51 @@
 }
 
 .feedback__form {
-  @include desktop {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-}
-
-.feedback__form > * {
-  @include desktop {
-    flex-grow: 0;
-    flex-shrink: 1;
-    margin-bottom: 0;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -12px -6px;
+  width: calc(100% + 12px);
+  max-width: 510px;
 }
 
 .feedback-form__item {
-  @include desktop {
-    width: clamp(172px, 45%, 240px);
-  }
-}
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 12px 6px;
+  min-width: 172px;
+  width: calc(50% - 6px);
+  max-width: 240px;
 
-.feedback-form__item:nth-child(n + 3) {
-  @include desktop {
-    margin-top: 12px;
-  }
-}
-
-.feedback-form__item:nth-child(2n + 1) {
-  @include desktop {
-    margin-right: 24px;
-  }
-}
-
-.feedback-form__item:not(:last-of-type) {
-  margin-bottom: 12px;
-
-  @include desktop {
-    margin-bottom: 0;
+  @include mobile-only {
+    width: 240px;
   }
 }
 
 .feedback-form__submit {
-  margin-top: 24px;
+  width: 172px;
+
+  color: $color-black;
+
+  background-color: $color-green;
+}
+
+.feedback-form__submit:hover {
+  color: $color-black;
+
+  background-color: $color-yellow;
+}
+
+.feedback-form__submit:focus {
+  color: $color-black;
+
+  background-color: $color-orange;
+}
+
+.feedback-form__submit:active {
+  color: $color-black;
+
+  background-color: $color-yellow;
+
+  opacity: 0.8;
 }

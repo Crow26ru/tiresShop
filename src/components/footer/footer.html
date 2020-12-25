@@ -12,16 +12,22 @@
     <div class="footer__feedback feedback">
       <h2>Обратная связь</h2>
       <p>Оставьте ваш номер телефона и&nbsp;мы&nbsp;вам перезвоним</p>
-      <form action="#" method="POST" class="feedback__form feedback-form">
-        <div class="feedback-form__item input-container">
+      <form action="#" method="POST" class="feedback__form feedback-form" aria-label="Форма для обратной связи">
+        <div class="feedback-form__item text-input text-input--dark-bg">
           <label for="name">Ваше имя:</label>
-          <input id="name" class="input input--dark-bg" name="name" type="text" placeholder="Владислав" required>
+          <div class="text-input__wrapper">
+            <input id="name" class="text-input__input" name="name" type="text" placeholder="Владислав" required>
+          </div>
         </div>
-        <div class="feedback-form__item input-container">
+        <div class="feedback-form__item text-input text-input--dark-bg">
           <label for="phone-num">Номер телефона:</label>
-          <input id="phone-num"  class="input input--dark-bg" type="text" placeholder="+7 (999) 123-45-67" required>
+          <div class="text-input__wrapper">
+            <input id="phone-num" class="text-input__input" type="text" placeholder="+7 (999) 123-45-67" required>
+          </div>
         </div>
-        <button class="btn btn--stroke feedback-form__submit" type="submit">Отправить</button>
+        <div class="feedback-form__item">
+          <button class="btn feedback-form__submit" type="submit">Отправить</button>
+        </div>
       </form>
     </div>
   </div>

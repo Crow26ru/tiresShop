@@ -87,51 +87,63 @@
   }
 }
 
+// Select and input on mobile
+@include mobile-only {
+  .shop-filter__item select,
+  .shop-filter__item input {
+    border-color: $color-silver;
+
+    &:hover {
+      border-color: $color-green;
+    }
+
+    &:active {
+      border-color: $color-silver;
+
+      opacity: 0.8;
+    }
+  }
+
+  .shop-filter__item select {
+    max-width: 240px;
+  }
+}
+
+
 // Cost filter
 .shop-filter__item--cost {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-
   @include mobile-only {
+    display: flex;
     flex-direction: row;
   }
 }
 
-.shop-filter__cost-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-grow: 0;
-  flex-shrink: 0;
-  // width: 39.6%;
-
-  @include tablet {
-    width: 100%;
+.shop-filter__cost-input {
+  @include mobile-only {
+    min-width: 90px;
+    width: 40%;
+    max-width: 150px;
   }
 }
 
-.shop-filter__cost-wrapper:nth-last-of-type(n + 2) {
+.shop-filter__cost-input:nth-last-of-type(n + 2) {
   @include tablet {
     margin-bottom: 12px;
   }
 }
 
 @include mobile-only {
-  .shop-filter__cost-wrapper:nth-last-child(n + 2) {
+  .shop-filter__cost-input:nth-last-child(n + 2) {
     margin-right: 24px;
   }
 }
 
-.shop-filter__cost-wrapper > label {
+.shop-filter__cost-input label {
   margin-right: 8px;
-
-  @include tablet {
-    width: 24px;
-  }
+  width: 24px;
 }
 
+/*
 .shop-filter__cost-wrapper > input {
   width: 84px;
 
@@ -139,6 +151,7 @@
     width: calc(100% - 32px);
   }
 }
+*/
 
 .shop-filter__controls {
   display: flex;

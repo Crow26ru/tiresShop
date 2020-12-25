@@ -10,10 +10,18 @@
 
 // Interactive elemetns
 @import "modules/link";
-@import "modules/input";
+// @import "modules/input";
 @import "modules/btn";
 @import "modules/radio-btn";
 @import "modules/select";
+
+// Micro components
+// @import "modules/input-container";
+@import "modules/text-input";
+@import "modules/card";
+@import "modules/paginator";
+@import "modules/popular";
+@import "modules/gallery";
 
 // Components
 @import "modules/header";
@@ -23,11 +31,8 @@
 @import "modules/footer";
 @import "modules/contacts";
 @import "modules/feedback";
-@import "modules/input-container";
 @import "modules/features";
-@import "modules/card";
-@import "modules/paginator";
-@import "modules/popular";
 @import "modules/shop";
 @import "modules/shop-filter";
 @import "modules/catalog";
+@import "modules/product";

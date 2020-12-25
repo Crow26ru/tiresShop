@@ -1,0 +1,125 @@
+$label-font-weight: 600;
+$label-font-size: 14px;
+$label-line-height: 16px;
+
+$input-border-light-bg: 2px solid $color-blue;
+$input-border-dark-bg: 2px solid $color-white;
+$input-border-radius: 8px;
+$input-padding: 0 6px;
+$input-height: 48px;
+
+$input-font-weight: 400;
+$input-font-size: 16px;
+$input-line-height: 20px;
+
+$vertical-indent: 6px;
+$horisontal-indent: 8px;
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  color: $color-black;
+}
+
+.text-input label {
+  margin: 0 0 $vertical-indent 0;
+
+  font-weight: $label-font-weight;
+  font-size: $label-font-size;
+  line-height: $label-line-height;
+}
+
+.text-input input,
+.text-input input:hover,
+.text-input input:focus,
+.text-input input:active {
+  transition: border-color 0.4s, opacity 0.4s;
+}
+
+.text-input input {
+  border: $input-border-light-bg;
+  border-radius: $input-border-radius;
+  padding: $input-padding;
+  width: 100%;
+  height: $input-height;
+  box-sizing: border-box;
+
+  font-weight: $input-font-weight;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+
+  background-color: $color-white;
+
+  appearance: none;
+}
+
+.text-input input:hover {
+  border-color: $color-dark-blue;
+}
+
+.text-input input:focus {
+  border-color: $color-orange;
+
+  outline: none;
+}
+
+.text-input input:active {
+  border-color: $color-blue;
+
+  opacity: 0.8;
+}
+
+.text-input input::placeholder {
+  color: $color-placeholder;
+
+  opacity: 1;
+}
+
+// На тёмном фоне
+.text-input--dark-bg,
+.text-input--dark-bg input {
+  color: $color-white;
+}
+
+.text-input--dark-bg input {
+  border: $input-border-dark-bg;
+
+  background-color: transparent;
+}
+
+.text-input--dark-bg input:hover {
+  border-color: $color-yellow;
+}
+
+.text-input--dark-bg input:focus {
+  border-color: $color-orange;
+}
+
+.text-input--dark-bg input:active {
+  border-color: $color-yellow;
+
+  opacity: 0.8;
+}
+
+.text-input--dark-bg input::placeholder {
+  color: $color-white;
+
+  opacity: 0.8;
+}
+
+// Горизональная ориентация
+.text-input--horisontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-input--horisontal label {
+  margin: 0 $horisontal-indent 0 0;
+}
+
+.text-input--horisontal .text-input__wrapper {
+  flex-grow: 1;
+}

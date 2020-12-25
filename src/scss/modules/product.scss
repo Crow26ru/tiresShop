@@ -1,0 +1,81 @@
+.product h1 {
+  margin-bottom: 24px;
+
+  font-family: $font-secondary;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.product__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  @include mobile-only {
+    flex-direction: column;
+  }
+}
+
+.product__gallery {
+  @include mobile-only {
+    margin-bottom: 48px;
+  }
+}
+
+.product__images,
+.product__text-content {
+  @include tablet {
+    width: calc(100% / 2 - 8px);
+  }
+
+  @include desktop {
+    width: calc(100% / 2 - 12px);
+  }
+}
+
+.product__images {
+  @include tablet {
+    margin-right: 16px;
+  }
+
+  @include desktop {
+    margin-right: 24px;
+  }
+}
+
+.product__img {
+  @include mobile-only {
+    margin: 0 auto 48px;
+    width: 288px;
+    height: 288px;
+  }
+
+  @include tablet-only {
+    margin: 0 0 48px 0;
+    width: 320px;
+    height: 320px;
+  }
+
+  @include desktop {
+    margin: 0 0 72px 0;
+    width: 528px;
+    height: 528px;
+  }
+}
+
+.product__text-content h2,
+.product__text-content p {
+  margin: 0 0 24px;
+}
+
+// Ценник
+.product__text-content strong {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.product__text-content p:last-of-type {
+  margin-bottom: 0;
+}

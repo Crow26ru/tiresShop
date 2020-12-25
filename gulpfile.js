@@ -88,7 +88,7 @@ export const startServer = () => {
     cors: true,
     server: {
       baseDir: 'dist'
-    }
+    },
   });
 
   gulp.watch('src/**/*.html', gulp.series(makeHtml, refresh));

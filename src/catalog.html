@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/HelveticaNeue-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/HelveticaNeue-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Шинный магазин | Каталог</title>
 </head>
@@ -126,13 +131,17 @@
           <fieldset>
             <legend>Цена</legend>
             <div class="shop-filter__item shop-filter__item--cost">
-              <div class="shop-filter__cost-wrapper">
-                <label for="min-cost">от</label>
-                <input id="min-cost" class="input" name="min-cost" type="text" placeholder="2000">
+              <div class="shop-filter__cost-input text-input text-input--horisontal">
+                <label for="min-price">от</label>
+                <div class="text-input__wrapper">
+                  <input id="min-price" class="text-input__input" type="text" placeholder="2000">
+                </div>
               </div>
-              <div class="shop-filter__cost-wrapper">
-                <label for="max-cost">до</label>
-                <input id="max-cost" class="input" name="max-cost" type="text" placeholder="28000">
+              <div class="shop-filter__cost-input text-input text-input--horisontal">
+                <label for="max-price">до</label>
+                <div class="text-input__wrapper">
+                  <input id="max-price" class="text-input__input" type="text" placeholder="20000">
+                </div>
               </div>
             </div>
           </fieldset>
@@ -148,7 +157,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -159,7 +168,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -170,7 +179,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -181,7 +190,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -192,7 +201,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -203,7 +212,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -214,7 +223,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -225,7 +234,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
@@ -236,7 +245,7 @@
               <picture>
                 <source media="(min-width: 1280px)" srcset="img/card-catalog__image-desktop@1x.jpg 1x, img/card-catalog__image-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/card-catalog__image-tablet@1x.jpg 1x, img/card-catalog__image-tablet@2x.jpg 2x">
-                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="mg/card-catalog__image-mobile@2x.jpg 2x" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
+                <img class="card__img" width="132" height="132" src="img/card-catalog__image-mobile@1x.jpg" srcset="img/card-catalog__image-mobile@2x.jpg 2x" loading="lazy" alt="Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)">
               </picture>
               <div class="card__description">
                 <a href="card.html">Грузовая шина 315/70 R22.5 Goodride CR762A (руль/прицеп)</a>
