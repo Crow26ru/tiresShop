@@ -63,16 +63,11 @@ export const makeHtml = () => {
 }
 
 export const compressImages = () => {
-  return gulp.src('src/img/*.{jpg,svg}')
+  return gulp.src('src/img/*.jpg')
   .pipe(imagemin([
     imagemin.mozjpeg({ quality: 70, progressive: true }),
-    imagemin.svgo({
-        plugins: [
-            { removeViewBox: true },
-            { cleanupIDs: false }
-        ]
-    })
-  ]));
+  ]))
+  .pipe(gulp.dest('src/img/'));
 }
 
 export const refresh = (done) => {
